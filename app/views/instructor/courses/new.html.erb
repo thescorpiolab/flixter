@@ -3,8 +3,10 @@
   <h1>Add a new section</h1>
   <%= simple_form_for @section, url: instructor_course_sections_path(current_course) do |f| %>
     <%= f.input :title %>
+    <%= f.input :image %>
     <br />
     <%= f.submit "Add a section", class: 'btn btn-primary' %>
+
     <br />
     <br />
   <% end %>
