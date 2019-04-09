@@ -1,6 +1,6 @@
 class Course < ApplicationRecord
-  require 'carrierwave/orm/activerecord'		
-  mount_uploader :image, ImageUploader
+  require 'carrierwave/orm/activerecord'
+  mount_uploader :images, ImageUploader
 
   belongs_to :user
   has_many :sections
