@@ -9,7 +9,7 @@ class LessonsController < ApplicationController
 
 	def require_authorized_for_current_lesson
     if !current_user.enrollments.pluck(:course_id).include?(current_lesson.section.course.id)
-      redirect_to course_path, alert: "You must be enrolled to view lessons"
+      redirect_to course_path(current_lesson.section.course), alert: "You must be enrolled to view lessons"
     end
   end
 
